@@ -65,12 +65,12 @@ const config = {
         items: [
           {
             type: "docSidebar",
-            sidebarId: "tutorialSidebar",
+            sidebarId: "mainSidebar",
             position: "left",
-            label: "Tutorial",
+            label: "Docs",
           },
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/bank-of-jubjub",
             label: "GitHub",
             position: "right",
           },
@@ -83,31 +83,26 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Tutorial",
+                label: "Introduction",
                 to: "/docs/intro",
               },
             ],
           },
           {
             title: "Community",
-            items: [
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
-              },
-            ],
+            items: [],
           },
           {
             title: "More",
             items: [
               {
                 label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                href: "https://github.com/bank-of-jubjub",
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Bank of JubJub. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

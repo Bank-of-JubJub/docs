@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# What is Bank of JubJub?
+# What is Bank of the JubJub?
 
 Token with private balances using zkSNARKs and Homomorphic Encryption, inspired by [Zeestar](https://files.sri.inf.ethz.ch/website/papers/sp22-zeestar.pdf) and [Zether](https://crypto.stanford.edu/~buenz/papers/zether.pdf), implemented in [Noir](https://noir-lang.org/) (and Rust).
 
@@ -32,3 +32,7 @@ Cons:
 - Users have to use a new Private key. The pain can be mitigated by generating a key from an ethereum signature, like zk.money.
 - Deposits and transfers are a 2 step process. This allows multiple people to send the same account funds in the same block, but requires a processing step. Senders can incentivize the process of this step so it still feels like a 1 step process. 
 - limit of ~1 trillion tokens per contract (~11 billion if using 2 decimals)
+
+## Further Reading
+
+Review the user flow on the sequence diagram [here](diagram.md).
