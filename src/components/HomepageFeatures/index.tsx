@@ -11,7 +11,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: "Easy to Use",
-    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
+    Svg: require("@site/static/img/bird.svg").default,
     description: (
       <>
         Easily hide your transaction amounts and create single-use addresses to
@@ -22,7 +22,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Extensible",
-    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+    Svg: require("@site/static/img/bird.svg").default,
     description: (
       <>
         Extend the functionality of Bank of JubJub by using contract plugins,
@@ -32,7 +32,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Powered by cryptography",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    Svg: require("@site/static/img/bird.svg").default,
     description: (
       <>
         Bank of JubJub runs on Ethereum and is made possible by zk-SNARKs, and
