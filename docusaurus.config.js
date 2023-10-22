@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Bank of JubJub",
   tagline: "Privacy is cool",
-  favicon: "img/favicon.ico",
+  favicon: "img/bird.svg",
 
   // Set the production url of your site here
   url: "https://bankofjubjub.com",
@@ -55,7 +55,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
+      image: "img/bird.svg",
       colorMode: {
         defaultMode: "light",
         disableSwitch: true,
