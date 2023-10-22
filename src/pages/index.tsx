@@ -35,9 +35,9 @@ export default function Home(): JSX.Element {
       title={`${siteConfig.title}`}
       description="ERC20s with private balances using zkSNARKs and Homomorphic Encryption."
     >
-      <Head>
-        <meta property="og:image" content="img/bird.svg" />
-      </Head>
+      {/* <Head>
+        <meta property="og:image" content="img/bird.png" />
+      </Head> */}
       <HomepageHeader />
       <main>
         <HomepageFeatures />
