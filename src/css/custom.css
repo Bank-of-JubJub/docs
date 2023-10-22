@@ -13,6 +13,7 @@
   --ifm-color-primary-light: #222121;
   --ifm-color-primary-lighter: #242222;
   --ifm-color-primary-lightest: #282727;
+    --ifm-font-family-base: 'Times New Roman';
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -24,4 +25,8 @@
   --ifm-color-primary-light: #ffffff;
   --ifm-color-primary-lighter: #ffffff;
   --ifm-color-primary-lightest: #ffffff;
+}
+
+a {
+  text-decoration: underline;
 }

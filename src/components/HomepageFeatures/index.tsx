@@ -2,6 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import styles from "./styles.module.css";
 import Head from "@docusaurus/Head";
+import BirdSvg from "@site/static/img/bird.svg";
 
 type FeatureItem = {
   title: string;
@@ -12,18 +13,17 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: "Easy to Use",
-    Svg: require("@site/static/img/bird.svg").default,
+    Svg: require("@site/static/img/dot-circle-solid.svg").default,
     description: (
       <>
-        Easily hide your transaction amounts and create single-use addresses to
-        mask your on-chain activity and have proper wallet hygiene without
-        thinking.
+        Easily hide transaction amounts and create single-use addresses to mask
+        your on-chain activity and have proper wallet hygiene without thinking.
       </>
     ),
   },
   {
     title: "Extensible",
-    Svg: require("@site/static/img/bird.svg").default,
+    Svg: require("@site/static/img/modular.svg").default,
     description: (
       <>
         Extend the functionality of Bank of JubJub by using contract plugins,
@@ -33,7 +33,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Powered by cryptography",
-    Svg: require("@site/static/img/bird.svg").default,
+    Svg: require("@site/static/img/ethereum.svg").default,
     description: (
       <>
         Bank of JubJub runs on Ethereum and is made possible by zk-SNARKs, and
@@ -59,14 +59,27 @@ function Feature({ title, Svg, description }: FeatureItem) {
 
 export default function HomepageFeatures(): JSX.Element {
   return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
+    <div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <div style={{ width: "20%", textAlign: "center" }}>
+          <BirdSvg />
         </div>
       </div>
-    </section>
+      <section className={styles.features}>
+        <div className="container">
+          <div className="row">
+            {FeatureList.map((props, idx) => (
+              <Feature key={idx} {...props} />
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

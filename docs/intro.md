@@ -4,8 +4,6 @@ sidebar_position: 1
 
 # Bank of the JubJub
 
-<img src="/img/bird.svg" alt="sequence" />
-
 ## What is Bank of the JubJub?
 
 Token with private balances using zkSNARKs and Homomorphic Encryption, inspired by [Zeestar](https://files.sri.inf.ethz.ch/website/papers/sp22-zeestar.pdf) and [Zether](https://crypto.stanford.edu/~buenz/papers/zether.pdf), implemented in [Noir](https://noir-lang.org/) (and Rust).
