@@ -32,7 +32,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="ERC20s with private balances using zkSNARKs and Homomorphic Encryption."
+      description="Wrap any ERC20 for private balances, using zkSNARKs and Homomorphic Encryption."
     >
       <HomepageHeader />
       <main>

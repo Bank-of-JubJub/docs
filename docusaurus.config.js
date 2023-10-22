@@ -7,7 +7,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Bank of JubJub",
-  tagline: "Privacy is cool",
+  tagline:
+    "Wrap any ERC20 for private balances, using zkSNARKs and Homomorphic Encryption.",
   favicon: "img/bird.svg",
 
   // Set the production url of your site here
