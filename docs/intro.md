@@ -35,4 +35,4 @@ Cons:
 
 ## Further Reading
 
-Review the user flow on the sequence diagram [here](diagram.md).
+Review the user flow on the sequence diagram [here](diagrams.md).
