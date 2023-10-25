@@ -10,27 +10,29 @@ Token with private balances using zkSNARKs and Homomorphic Encryption, inspired 
 
 ## Quick description
 
-This project is an implementation of a token on Ethereum with private balances, i.e all the balances are publicly stored on the Ethereum blockchain in an encrypted format, but only the owner of an Ethereum account is able to decrypt their own balance. This is possible thanks to the improved expressiveness allowed by homomorphic encryption on top of zkSNARKs, allowing a party **A** to compute over encrypted data owned by *another* party **B** i.e **A** can add encrpyted balances owned by **B** without needing any knowledge of those balances.
+This project is an implementation of a token wrapper on Ethereum with private balances, i.e all the balances are publicly stored on the Ethereum blockchain in an encrypted format, but only the owner of the associated private key is able to decrypt their own balance. This is possible thanks to the improved expressiveness allowed by homomorphic encryption on top of zkSNARKs, allowing a party **A** to compute over encrypted data owned by *another* party **B** i.e **A** can add encrpyted balances owned by **B** without needing any knowledge of those balances.
 
 Pros:
 
 - Transfer amounts are encrypted
-- Accounts are decoupled from eth accounts
-- Can be used with something like stealth addresses to make single use addresses easy and more private
-- It's expensive, ~500k gas for proof verification, probably best to use on L2
-- Auditable. everyone can see the interaction history, tracing back to deposits into the contract. If users receive tainted funds, they can burn them and can generate proofs of burn for that amount.
-- users can submit proofs to a relayer network to post transactions for them, so they don't doxx themselves by using a funded Ethereum account. this requires adding a fee.
-- Can be used with any erc20 token
-- Option to provider a relayer fee, paid from the encrypted amount, that incentivizes anon third-parties to submit transfer or withdraw transactions on behalf of the user--this helps maintain anonymity
-- Accounts can be locked to a contract. The contract that an account is locked to can conditionally use an account's funds. A user can lock their funds in a contract and the contract only unlocks them after some condition is met (ie with a zk proof of something). Some things you could build with this:
+- Bank of JubJub can be used with any erc20 token
+- Fund masking pool, similar to [Privacy Pools](https://www.privacypools.com/), but not restricted to fixed deposit amounts. All users can participate in the same pool with arbitrary deposit amounts because amounts are encrypted.
+- Bank accounts are decoupled from eth accounts
+- Can be used with something like [stealth addresses](https://vitalik.ca/general/2023/01/20/stealth.html) to make single use addresses easy and more private
+- Auditable. Everyone can see the interaction history, tracing back to deposits into the contract. If users receive tainted funds, they can burn them and can generate proofs of burn for that amount.
+- Users can submit proofs to a relayer network to post transactions for them, so they don't doxx themselves by using a funded Ethereum account. This requires adding a fee.
+- Option to provide a relayer fee, paid from the encrypted amount, that incentivizes any third-party to submit  transactions on behalf of the user--this helps maintain anonymity
+- It's relatively expensive, ~500k gas for proof verification. Can be used more cheaply on any EVM L2.
+- The Bank protocol can be extended with additional contracts by locking accounts to the contract. The contract that an account is locked to can conditionally use an account's funds. A user can lock their funds in a contract and the contract only unlocks them after some condition is met (ie with a zk proof of something). Some things you could build with this:
   - A sealed bid auction.
   - Private, p2p trustless exchange (something like [zkp2p](https://zkp2p.xyz/), but with amounts hidden)
+  - Private token swaps between different wrapped tokens
   - Credit to [Zether](https://crypto.stanford.edu/~buenz/papers/zether.pdf) for this idea
 
 Cons:
 
-- Users have to use a new Private key. The pain can be mitigated by generating a key from an ethereum signature, like zk.money.
-- Deposits and transfers are a 2 step process. This allows multiple people to send the same account funds in the same block, but requires a processing step. Senders can incentivize the process of this step so it still feels like a 1 step process. 
+- Users have to use a new private key. The pain can be mitigated by generating a key from an ethereum signature, like zk.money or [umbra](https://app.umbra.cash/faq#how-does-it-work-technical).
+- Deposits and transfers are a 2 step process. This allows multiple people to send the same account funds in the same block, but requires a processing step. Senders can incentivize the process of this step so it still feels like a 1 step process to users.
 - limit of ~1 trillion tokens per contract (~11 billion if using 2 decimals)
 
 ## Further Reading
