@@ -96,7 +96,12 @@ const config = {
           },
           {
             title: "Community",
-            items: [],
+            items: [
+              {
+                label: "Twitter",
+                href: "https://twitter.com/bankofjubjub"
+              }
+            ],
           },
           {
             title: "More",
