@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Bank of JubJub",
   tagline:
-    "Wrap any ERC20 for private balances, using zkSNARKs and Homomorphic Encryption.",
+    "Extensible wrapper for any ERC20 for private balances and transfers, using zkSNARKs and Homomorphic Encryption.",
   favicon: "img/bird.svg",
 
   // Set the production url of your site here
