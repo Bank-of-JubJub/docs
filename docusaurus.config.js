@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Bank of JubJub",
   tagline:
-    "Wrap any ERC20 for private balances, using zkSNARKs and Homomorphic Encryption.",
+    "Extensible wrapper for any ERC20 for private balances and transfers, using zkSNARKs and Homomorphic Encryption.",
   favicon: "img/bird.svg",
 
   // Set the production url of your site here
@@ -43,7 +43,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/bank-of-jubjub/docs/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/bank-of-jubjub/docs/blob/master",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -96,7 +96,12 @@ const config = {
           },
           {
             title: "Community",
-            items: [],
+            items: [
+              {
+                label: "Twitter",
+                href: "https://twitter.com/bankofjubjub"
+              }
+            ],
           },
           {
             title: "More",
